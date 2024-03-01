@@ -2,6 +2,12 @@
 
 Bu proje, RSA şifreleme algoritmasını uygulamak için C++ dilinde yazılmıştır. RSA algoritmasının anahtar üretimi, metin şifreleme ve şifreli metni çözme işlemleri burada gerçekleştirilir.
 
+# Program Görselleri
+
+![terminalOutput](https://github.com/n0connect/RSA/assets/126422643/0cea7c65-6027-4f42-8310-f8207f9dcb3e)
+![terminalOutput2](https://github.com/n0connect/RSA/assets/126422643/118cea5b-de4c-42c2-8c8d-c50ac8871ab1)
+** Programın çalışma anından görseller.
+
 ## Dosyalar
 
 - **Config.ini**: Proje yapılandırma dosyası.
