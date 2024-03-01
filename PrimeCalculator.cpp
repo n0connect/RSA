@@ -49,8 +49,9 @@ void WritePrimesToFile(const std::string &fileName, const mpz_class &prime, shor
 int main()
 {
     short int _bit_ = 64;
+    short int _count_ = 10;
+    short int primeCount{0};
     short int _validator_ = 2000;
-    unsigned long long int primeCount{0};
 
     try
     {
@@ -60,14 +61,15 @@ int main()
         std::cout << "A higher validator size results in a more rigorous primality check." << std::endl;
 
         // ** Kullanıcıdan bit ve validator boyutunu girmesini isteyen mesajları ekrana yazdır
-        std::cout << "\nEnter the bit size (recommended: 256): ";
-        std::cout << "\nEnter the validator size (recommended: 25): ";
-
-        std::cout << "Enter the bit size: ";
+        std::cout << "Enter the bit size (recommended: 256): ";
         std::cin >> _bit_;
 
-        std::cout << "Enter the validator size: ";
+        std::cout << "Enter the validator size (recommended: 25): ";
         std::cin >> _validator_;
+
+        // ** Kaç adet asal sayı isteniyor
+        std::cout << "Enter the prime count (recommended: 10): ";
+        std::cin >> _count_;
     }
     catch (std::exception &ex)
     {
@@ -85,7 +87,7 @@ int main()
 
     mpz_class prime{};
 
-    while (primeCount < 10)
+    while (primeCount < _count_)
     {
         prime = GenerateRandomPrime(_bit_, _validator_);
         WritePrimesToFile("probPrime.txt", prime, _bit_, _validator_);
