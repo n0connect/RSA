@@ -76,6 +76,8 @@ int main()
         OwnErr();
     }
 
+    std::cout << std::endl;
+
     std::ofstream outputFile("probPrime.txt", std::ios_base::app); // Dosyanın sonuna ekleme modunda aç
     if (!outputFile.is_open())
     {
